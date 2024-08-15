@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-AcessapiApplication<acessapi>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "accessapi.acessapi.AcessapiApplication",
+            "projectName": "acessapi",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
