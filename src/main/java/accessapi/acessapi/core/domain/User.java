@@ -1,20 +1,20 @@
 package accessapi.acessapi.core.domain;
 
-public class UserEntity {
+public class User {
     private Long user_id;
     private String user_email;
     private String user_password;
     private Long user_fk_person_id;
     private Boolean user_administrator;
 
-    public UserEntity(Long user_id, String user_email,String user_password,Boolean user_administrator) {
+    public User(Long user_id, String user_email,String user_password,Boolean user_administrator) {
         this.user_id = user_id;
         this.user_email = user_email;
         this.user_password = user_password;
         this.user_administrator = user_administrator;
     }
 
-    public UserEntity() {
+    public User() {
         
     }
 

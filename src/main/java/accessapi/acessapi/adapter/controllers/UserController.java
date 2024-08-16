@@ -11,7 +11,7 @@ import accessapi.acessapi.core.ports.UserServicePort;
 import accessapi.acessapi.adapter.dtos.users.UserDto;
 import accessapi.acessapi.adapter.dtos.users.UserDtoReturnig;
 import accessapi.acessapi.adapter.mappers.UserMappers;
-import accessapi.acessapi.core.domain.UserEntity;
+import accessapi.acessapi.core.domain.User;
 
 @RestController
 @RequestMapping("api/users")
@@ -28,8 +28,8 @@ public class UserController {
     @PostMapping("/create")
     @ResponseStatus(HttpStatus.CREATED)
     public UserDtoReturnig create(@RequestBody UserDto userDto) {
-        UserEntity newUser = userMappers.mapperUserDomain(userDto);
-        UserEntity creteNewUser = userServicePort.createUser(newUser);
+        User newUser = userMappers.mapperUserDomain(userDto);
+        User creteNewUser = userServicePort.createUser(newUser);
         UserDtoReturnig returnigUser = userMappers.mapperUserDto(creteNewUser);
         return returnigUser;
     }

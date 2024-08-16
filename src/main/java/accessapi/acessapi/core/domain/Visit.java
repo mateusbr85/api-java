@@ -2,17 +2,17 @@ package accessapi.acessapi.core.domain;
 
 import java.sql.Timestamp;
 
-public class VisitEntity {
+public class Visit {
     Long visit_id;
     Timestamp visit_created_at;
     Long visit_fk_resident_id;
     Long visit_fk_visitor_id;
 
-    public VisitEntity() {
+    public Visit() {
 
     }
 
-    public VisitEntity(Long visit_id, Timestamp visit_created_at, Long visit_fk_resident_id, Long visit_fk_visitor_id) {
+    public Visit(Long visit_id, Timestamp visit_created_at, Long visit_fk_resident_id, Long visit_fk_visitor_id) {
 
     }
 

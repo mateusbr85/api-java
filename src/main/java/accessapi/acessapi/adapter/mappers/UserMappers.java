@@ -4,14 +4,14 @@ import org.springframework.stereotype.Component;
 
 import accessapi.acessapi.adapter.dtos.users.UserDto;
 import accessapi.acessapi.adapter.dtos.users.UserDtoReturnig;
-import accessapi.acessapi.core.domain.UserEntity;
+import accessapi.acessapi.core.domain.User;
 
 @Component
 public class UserMappers {
     
 
-    public UserEntity mapperUserDomain( UserDto userDto) {
-        return new UserEntity(
+    public User mapperUserDomain( UserDto userDto) {
+        return new User(
             userDto.getUser_id(),
             userDto.getUser_email(),
             userDto.getUser_password(),
@@ -20,12 +20,12 @@ public class UserMappers {
     }
 
 
-    public UserDtoReturnig mapperUserDto (UserEntity userEntity) {
+    public UserDtoReturnig mapperUserDto (User user) {
         return new UserDtoReturnig(
-            userEntity.getUser_id(),
-            userEntity.getUser_emai(),
+            user.getUser_id(),
+            user.getUser_emai(),
             null,
-            userEntity.getUser_administrator()
+            user.getUser_administrator()
         );
     }
 }
